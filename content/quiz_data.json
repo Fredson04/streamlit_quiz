@@ -1,9 +1,9 @@
 [
     {
-        "question": "What is the primary goal of artificial intelligence?",
-        "information": "This field of computer science aims to create systems capable of performing tasks that would typically require human intelligence.",
-        "options": ["To simulate human intelligence", "To enhance computer speed", "To replace human jobs", "To improve data storage"],
-        "answer": "To simulate human intelligence"
+        "question": "Welche Maßnahmen sind erforderlich, um Löcher in der Ware zu beheben?",
+        "information": "",
+        "options": ["Überprüfung der Zungennadel auf Defekte", "Korrigierung der Legeschiene der Grundware", "Prüfung des Fadenzuführungsabstands", "Kontrolle der Stechkamm-Unterseite"],
+        "answer": ["Überprüfung der Zungennadel auf Defekte", "Korrigierung der Legeschiene der Grundware", "Prüfung des Fadenzuführungsabstands", "Kontrolle der Stechkamm-Unterseite"]
     },
     {
         "question": "What is 'machine learning' in the context of artificial intelligence?",

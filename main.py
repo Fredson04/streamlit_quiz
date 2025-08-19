@@ -53,16 +53,16 @@ def next_question():
     st.session_state.answer_submitted = False
 
 # Title and description
-st.title("Streamlit Quiz App")
+st.title("Wirksam Quiz")
 
 # Progress bar
 progress_bar_value = (st.session_state.current_index + 1) / len(quiz_data)
-st.metric(label="Score", value=f"{st.session_state.score} / {len(quiz_data) * 10}")
+st.metric(label="Punkte", value=f"{st.session_state.score} / {len(quiz_data) * 10}")
 st.progress(progress_bar_value)
 
 # Display the question and answer options
 question_item = quiz_data[st.session_state.current_index]
-st.subheader(f"Question {st.session_state.current_index + 1}")
+st.subheader(f"Frage {st.session_state.current_index + 1}")
 st.title(f"{question_item['question']}")
 st.write(question_item['information'])
 
@@ -76,9 +76,9 @@ if st.session_state.answer_submitted:
     for i, option in enumerate(options):
         label = option
         if option == correct_answer:
-            st.success(f"{label} (Correct answer)")
+            st.success(f"{label} (Richtige Antwort)")
         elif option == st.session_state.selected_option:
-            st.error(f"{label} (Incorrect answer)")
+            st.error(f"{label} (Falsche Antwort)")
         else:
             st.write(label)
 else:
@@ -91,11 +91,11 @@ st.markdown(""" ___""")
 # Submission button and response logic
 if st.session_state.answer_submitted:
     if st.session_state.current_index < len(quiz_data) - 1:
-        st.button('Next', on_click=next_question)
+        st.button('Nächste', on_click=next_question)
     else:
-        st.write(f"Quiz completed! Your score is: {st.session_state.score} / {len(quiz_data) * 10}")
-        if st.button('Restart', on_click=restart_quiz):
+        st.write(f"Quiz beendet! Dein Ergebnis ist: {st.session_state.score} / {len(quiz_data) * 10}")
+        if st.button('Neu versuchen', on_click=restart_quiz):
             pass
 else:
     if st.session_state.current_index < len(quiz_data):
-        st.button('Submit', on_click=submit_answer)
+        st.button('Antwort abgeben', on_click=submit_answer)

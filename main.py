@@ -25,7 +25,7 @@ div.stButton::hover button{
 """, unsafe_allow_html=True)
 
 # Initialize session variables if they do not exist
-default_values = {'current_index': 0, 'current_question': 0, 'score': 0, 'selected_option': None, 'answer_submitted': False}
+default_values = {'current_index': 0, 'current_question': 0, 'score': 0, 'selected_option': [], 'answer_submitted': False}
 for key, value in default_values.items():
     st.session_state.setdefault(key, value)
 
@@ -36,13 +36,13 @@ with open('content/quiz_data.json', 'r', encoding='utf-8') as f:
 def restart_quiz():
     st.session_state.current_index = 0
     st.session_state.score = 0
-    st.session_state.selected_option = None
+    st.session_state.selected_option = []
     st.session_state.answer_submitted = False
 
 def submit_answer():
 
     # Check if an option has been selected
-    if st.session_state.selected_option is not None:
+    if st.session_state.selected_option:
         # Mark the answer as submitted
         st.session_state.answer_submitted = True
         # Check if the selected option is correct
@@ -54,7 +54,7 @@ def submit_answer():
 
 def next_question():
     st.session_state.current_index += 1
-    st.session_state.selected_option = None
+    st.session_state.selected_option = []
     st.session_state.answer_submitted = False
 
 # Title and description

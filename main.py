@@ -63,7 +63,7 @@ def next_question():
     st.session_state.answer_submitted = False
 
 # Title and description
-st.title("Wirksam Quiz")
+st.title("bla Quiz")
 
 # Progress bar
 progress_bar_value = (st.session_state.current_index + 1) / len(quiz_data)

@@ -17,6 +17,9 @@ div.stButton button{ display: block; margin: 0 auto; background:white }
 div.stButton:visited button { display: block; margin: 0 auto; background:white }
 div.stButton:focus button { display: block; margin: 0 auto; background:gray }
 div.stButton:active button { display: block; margin: 0 auto; background:gray }
+div.stButton::hover button{
+   opacity: 0.8;
+}
 </style>
 """, unsafe_allow_html=True)
 

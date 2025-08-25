@@ -16,6 +16,17 @@ st.markdown("""
 div.stButton {
     display: block;
     margin: 0 auto;
+    color: #00c;
+    }
+div.stButton:visited {
+    display: block;
+    margin: 0 auto;
+    color: #ccc;
+    }
+div.stButton:focus {
+    display: block;
+    margin: 0 auto;
+    color: #cc0;
     }
 </style>
 """, unsafe_allow_html=True)

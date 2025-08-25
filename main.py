@@ -3,7 +3,7 @@ import json
 
 def run():
     st.set_page_config(
-        page_title="Streamlit quizz app",
+        page_title="Wirksam Quiz",
         page_icon="❓",
     )
 

@@ -13,21 +13,10 @@ if __name__ == "__main__":
 # Custom CSS for the buttons
 st.markdown("""
 <style>
-div.stButton {
-    display: block;
-    margin: 0 auto;
-    color: #00c;
-    }
-div.stButton:visited {
-    display: block;
-    margin: 0 auto;
-    color: #ccc;
-    }
-div.stButton:focus {
-    display: block;
-    margin: 0 auto;
-    color: #cc0;
-    }
+div.stButton { display: block; margin: 0 auto; background:white }
+div.stButton:visited { display: block; margin: 0 auto; background:white }
+div.stButton:focus { display: block; margin: 0 auto; background:green }
+div.stButton:active { display: block; margin: 0 auto; background:green }
 </style>
 """, unsafe_allow_html=True)
 

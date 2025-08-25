@@ -13,9 +13,10 @@ if __name__ == "__main__":
 # Custom CSS for the buttons
 st.markdown("""
 <style>
-div.stButton > button:first-child {
+div.stButton {
     display: block;
     margin: 0 auto;
+    }
 </style>
 """, unsafe_allow_html=True)
 

@@ -89,7 +89,7 @@ if st.session_state.answer_submitted:
 else:
     for i, option in enumerate(options):
         if st.button(option, key=i, use_container_width=True):
-            st.session_state.selected_option = option
+            st.session_state.selected_option.append(option)
 
 st.markdown(""" ___""")
 

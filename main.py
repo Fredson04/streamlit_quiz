@@ -38,6 +38,10 @@ def restart_quiz():
     st.session_state.score = 0
     st.session_state.selected_option = []
     st.session_state.answer_submitted = False
+    
+def isSelectedOptionTrue():
+    #for i in enumerate(st.session_state.selected_option):
+    return (st.session_state.selected_option == quiz_data[st.session_state.current_index]['answer'])
 
 def submit_answer():
 
@@ -46,7 +50,8 @@ def submit_answer():
         # Mark the answer as submitted
         st.session_state.answer_submitted = True
         # Check if the selected option is correct
-        if st.session_state.selected_option == quiz_data[st.session_state.current_index]['answer']:
+        #if st.session_state.selected_option == quiz_data[st.session_state.current_index]['answer']:
+        if(isSelectedOptionTrue()):
             st.session_state.score += 10
     else:
         # If no option selected, show a message and do not mark as submitted
@@ -78,14 +83,19 @@ options = question_item['options']
 correct_answer = question_item['answer']
 
 if st.session_state.answer_submitted:
-    for i, option in enumerate(options):
-        label = option
-        if option == correct_answer:
-            st.success(f"{label} (Richtige Antwort)")
-        elif option == st.session_state.selected_option:
-            st.error(f"{label} (Falsche Antwort)")
-        else:
-            st.write(label)
+    #for i, option in enumerate(options):
+    #    label = option
+    #    if option == correct_answer:
+    #        st.success(f"{label} (Richtige Antwort)")
+    #    elif option == st.session_state.selected_option:
+    #        st.error(f"{label} (Falsche Antwort)")
+    #    else:
+    #        st.write(label)
+    if(isSelectedOptionTrue()):
+        st.success(f"(Richtige Antwort)")
+    else:
+        st.error(f"(Falsche Antwort)")
+        
 else:
     for i, option in enumerate(options):
         if st.button(option, key=i, use_container_width=True):

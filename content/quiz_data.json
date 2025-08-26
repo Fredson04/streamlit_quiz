@@ -9,7 +9,7 @@
         "question": "What is 'machine learning' in the context of artificial intelligence?",
         "information": "This is a subset of artificial intelligence that involves the creation of systems that can learn from and make decisions based on data.",
         "options": ["A new programming language", "A data processing method", "A subset of artificial intelligence", "A type of computer hardware"],
-        "answer": ["A subset of artificial intelligence", "A data processing method"]
+        "answer": ["A subset of artificial intelligence"]
     },
     {
         "question": "What is a 'neural network' in terms of artificial intelligence?",

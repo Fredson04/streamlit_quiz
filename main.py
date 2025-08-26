@@ -41,7 +41,7 @@ def restart_quiz():
     
 def isSelectedOptionTrue():
     #for i in enumerate(st.session_state.selected_option):
-    return (st.session_state.selected_option == quiz_data[st.session_state.current_index]['answer'])
+    return (set(st.session_state.selected_option) == set(quiz_data[st.session_state.current_index]['answer']))
 
 def submit_answer():
 
